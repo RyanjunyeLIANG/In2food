@@ -26,11 +26,11 @@ export default class Dashboard extends React.Component {
     }
     
     return (
-      <>
-      <h2>Hi, {username}</h2>
-      <h3>This is the dashboard after login.</h3>
-      <button className="btn btn-secondary" onClick={this.handleLogout}>Logout</button>
-      </>
+      <headers className="d-flex align-items-center flex-column bd-highlight mb-3">
+        <h2>Hi, {username}</h2>
+        <h3>This is the dashboard after login.</h3>
+        <button className="btn btn-secondary" onClick={this.handleLogout}>Logout</button>
+      </headers>
     );
   }
 };
