@@ -4,7 +4,7 @@ import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 // import fakeAuth from './components/fake-auth';
 
 import Login from './Components/Login';
-import Dashboard from './Components/management/Dashboard';
+import Dashboard from './Components/Management/Dashboard';
 
 // Authenticate function with fake-auth component
 // function PrivateRoute({ children, ...rest }) {

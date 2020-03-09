@@ -1,6 +1,6 @@
 import React from 'react';
 
-import fakeAuth from '../fake-auth';
+import FakeAuth from '../FakeAuth';
 
 import { Redirect } from 'react-router-dom';
 
@@ -20,10 +20,11 @@ export default class Dashboard extends React.Component {
   }
 
   render() {
-    let username = fakeAuth.username;
+    let username = FakeAuth.username;
     if(this.state.signOutRedirect === true) {
       return <Redirect to="/login" />
     }
+    
     return (
       <>
       <h2>Hi, {username}</h2>

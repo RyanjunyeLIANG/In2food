@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import axios from 'axios';
 
 //import react-router functions
@@ -11,9 +11,9 @@ import { Redirect } from 'react-router-dom';
 import '../styles/login.css';
 
 //import fake Authorisation
-import fakeAuth from './fake-auth';
+import FakeAuth from './FakeAuth';
 
-export default class Login extends Component {
+export default class Login extends React.Component {
   constructor(props) {
     super(props);
 
@@ -72,8 +72,8 @@ export default class Login extends Component {
 
     //Authentication
     if(username === userdata.username && password === userdata.password) {
-      fakeAuth.authenticate(userdata.username);
-      console.log("User Login successful", fakeAuth.username);
+      FakeAuth.authenticate(userdata.username);
+      console.log("User Login successful", FakeAuth.username);
       this.setState(() => ({redirectToReferrer: true}));
     } else {
       this.setState(() => ({loginErrors: "d-block"}));
