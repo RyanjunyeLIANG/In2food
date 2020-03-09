@@ -1,7 +1,7 @@
 import React from 'react';
 
 // import logo from './logo.svg';
-import AppRouter from './app-router';
+import AppRouter from './AppRouter';
 
 //import styles
 import './styles/App.css';
