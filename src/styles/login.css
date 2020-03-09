@@ -216,14 +216,18 @@ input[type=text]:placeholder, input[type=password]:placeholder {
   width: 100%;
 }
 
+/* Login Logo */
 
+#logo {
+  width:60%;
+}
+
+.logo {
+  padding: 20px 0px 20px 0;
+}
 
 /* OTHERS */
 
 *:focus {
     outline: none;
 } 
-
-#icon {
-  width:60%;
-}
