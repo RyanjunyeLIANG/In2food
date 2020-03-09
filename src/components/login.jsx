@@ -127,7 +127,7 @@ export default class Login extends Component {
           
           {/* Remind Password */}
           <div id="formFooter">
-            <a className="underlineHover" href="#">Forgot Password?</a>
+            <a className="underlineHover" href="/fake">Forgot Password?</a>
           </div>
         </div>
       </div>
