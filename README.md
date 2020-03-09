@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Initialize
-First time after clone from git repository -- Install Node_module
+First time after clone from git repository -- Install Dependencies
 ### `npm install`
 
 ## Available Scripts

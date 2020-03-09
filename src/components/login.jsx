@@ -1,26 +1,36 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 
+//import react-router functions
+import { Redirect } from 'react-router-dom';
+
 //import CSS components
 // import { Button } from 'react-bootstrap';
 
 //import CSS
 import '../styles/login.css';
 
+//import fake Authorisation
+import fakeAuth from './fake-auth';
+
 export default class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
+      //Fake Login User data
       data: {
         user: {
           username: "tester",
           password: "test"
         }
       },
+
+      //Dynamic variables
       username: "",
       password: "",
-      loginErrors: "",
+      loginErrors: "d-none",
+      redirectToReferrer: false,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -56,28 +66,40 @@ export default class Login extends Component {
     // });
   }
 
+  // Login Authentication
   loginAuthentication(username, password) {
     const userdata = this.state.data.user;
 
-    //Authentication Debugger
+    //Authentication
     if(username === userdata.username && password === userdata.password) {
-      console.log("User Login successful", userdata.username);
+      fakeAuth.authenticate(userdata.username);
+      console.log("User Login successful", fakeAuth.username);
+      this.setState(() => ({redirectToReferrer: true}));
     } else {
+      this.setState(() => ({loginErrors: "d-block"}));
       console.log("Login error.");
     }
   }
 
   render() {
+    const { redirectToReferrer } = this.state;
+
+    if(redirectToReferrer === true) {
+      return <Redirect to="/management" />
+    }
+    
     return (
       <div className="wrapper fadeInDown">
         <div id="formContent">
           {/* Tab titles */}
-
+          
           {/* Icon */}
-          <div className="fadeIn first">
-            <img src="#" id="icon" alt="In2food Icon" />
+          <div className="fadeIn first logo">
+            <img src={require('../images/In2foodLogo185x76px.png')} id="logo" alt="In2food Logo" />
           </div>
 
+          {/* Login Error indicator */}
+    <p id="errorIndicator" className={`alert alert-danger ${this.state.loginErrors}`}>Login Error!</p>
           {/* Login Form */}
           <form onSubmit={this.handleSubmit}>
             <input
