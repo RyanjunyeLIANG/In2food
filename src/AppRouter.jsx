@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 
-// import fakeAuth from './components/fake-auth';
+// import fakeAuth from './Components/FakeAuth';
 
 import Login from './Components/Login';
 import Dashboard from './Components/Management/Dashboard';
@@ -29,7 +29,7 @@ export default function AppRouter() {
       <Route exact path="/login" component={Login} />
       
       {/* Test router for management page */}
-      <Route exact path="/management" component={Dashboard} />
+      <Route exact path="/dashboard" component={Dashboard} />
 
       {/* Authenticate router for management page */}
       {/* <PrivateRoute exact path="/management">
