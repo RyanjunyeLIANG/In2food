@@ -12,45 +12,46 @@ export class PackingSlips extends React.Component{
     }
     render() {
         return (
-            <div>
-                <h1>Packing Slips</h1>
-            </div>
-            <div>
-                <h2>Filter Orders By:</h2>
-                <table>
-                    <tr>
-                        <th>Delivery Date:</th>
-                        <td>
-                            <select id="" name="">
-                                <option value="none">2/2/2020</option>
-                            </select>
-                        </td>
-                        <th>Customer Name:</th>
-                        <td>
-                            <select id="" name="">
-                                <option value="none">Bob</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th>Customer ID:</th>
-                        <td>
-                            <select id="" name="">
-                                <option value="none">123456</option>
-                            </select>
-                        </td>
-                        <th>Invoice Number:</th>
-                        <td>
-                            <select id="" name="">
-                                <option value="none">123456</option>
-                            </select>
-                        </td>
-                    </tr>
+            <div id="body">
+                <div name="banner">
+                    <h1>Packing Slips</h1>
+                </div>
+                <div name="filter">
+                    <h2>Filter Orders By:</h2>
+                    <table>
+                        <tr>
+                            <th>Delivery Date:</th>
+                            <td>
+                                <select id="" name="">
+                                    <option value="none">2/2/2020</option>
+                                </select>
+                            </td>
+                            <th>Customer Name:</th>
+                            <td>
+                                <select id="" name="">
+                                    <option value="none">Bob</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>Customer ID:</th>
+                            <td>
+                                <select id="" name="">
+                                    <option value="none">123456</option>
+                                </select>
+                            </td>
+                            <th>Invoice Number:</th>
+                            <td>
+                                <select id="" name="">
+                                    <option value="none">123456</option>
+                                </select>
+                            </td>
+                        </tr>
 
-                </table>        
-                
-            </div>
-            <div>
+                    </table>        
+                    
+                </div>
+                <div name="result">
                 <h2>Results</h2>
                 <table>
                     <tr>
@@ -73,7 +74,7 @@ export class PackingSlips extends React.Component{
                     </tr>
                 </table>
             </div>
-
+            </div>
         );
     }
 }
