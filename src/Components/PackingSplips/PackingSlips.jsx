@@ -5,7 +5,7 @@ import React from 'react';
 import NavButton from '../UI/Navbar';
 
 // import { Redirect } from 'react-router-dom'
-export class PackingSpips extends React.Component{
+export class PackingSlips extends React.Component{
     constructor(props) {
         super(props);
 
