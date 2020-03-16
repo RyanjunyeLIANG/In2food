@@ -1,18 +1,14 @@
 import React from 'react';
 
-//import components
-// import FakeAuth from '../FakeAuth';
-import NavButton from '../UI/Navbar';
+export default class PackingSlips extends React.Component {
+    // eslint-disable-next-line no-useless-constructor
+    // constructor(props) {
+    //     super(props);
+    // }
 
-// import { Redirect } from 'react-router-dom'
-export class PackingSlips extends React.Component{
-    constructor(props) {
-        super(props);
-
-    }
     render() {
         return (
-            <div id="body">
+            <div className="col-8 padding-fix" id="dashboardBody">
                 <div name="banner">
                     <h1>Packing Slips</h1>
                 </div>
@@ -74,7 +70,7 @@ export class PackingSlips extends React.Component{
                     </tr>
                 </table>
             </div>
-            </div>
+        </div>
         );
     }
 }

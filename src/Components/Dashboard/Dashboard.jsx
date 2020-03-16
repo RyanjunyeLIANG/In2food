@@ -1,10 +1,13 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom';
 
 //import components
+import Nav from './Nav';
+import DashboardRouter from '../Routers/DashboardRouter';
 // import FakeAuth from '../FakeAuth';
-import NavButton from '../UI/Navbar';
 
-import { Redirect } from 'react-router-dom';
+//import CSS
+import '../../styles/dashboard.css';
 
 export default class Dashboard extends React.Component {
 
@@ -47,17 +50,17 @@ export default class Dashboard extends React.Component {
       //   <button className="btn btn-secondary" onClick={this.handleLogout}>Logout</button>
       // </headers>
       <div className="row">
-        <div className="col-4 padding-fix">
-          <div>{this.props.name}</div>
-          <div className="btn-group-vertical">
-            <NavButton type="button" imgSrc="#" linkHref="/management/inventory" text="test"/>
-            <NavButton type="button" imgSrc="#" linkHref="/management/inventory" text="test"/>
-            <NavButton type="button" imgSrc="#" linkHref="/management/inventory" text="test"/>
-            <NavButton type="button" imgSrc="#" linkHref="/management/inventory" text="test"/>
+        <div className="text-center col-2 padding-fix">
+          <p>Logo component</p>
+          <Nav />
+          <hr></hr>
+          {/* Logout button */}
+          <div className="text-center full-width">
+            <button className="btn btn-secondary" onClick={this.handleLogout}>Logout</button>
           </div>
         </div>
-        <div className="col-8 padding-fix">
-          <div>Body</div>
+        <div className="col-10 padding-fix" id="dashboardBody">
+          <DashboardRouter />
         </div>
       </div>
     );
