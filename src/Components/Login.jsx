@@ -85,7 +85,7 @@ export default class Login extends React.Component {
     const { redirectToReferrer } = this.state;
 
     if(redirectToReferrer === true) {
-      return <Redirect to="/management" />
+      return <Redirect to="/dashboard" />
     }
     
     return (
