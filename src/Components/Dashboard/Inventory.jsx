@@ -52,15 +52,17 @@ export default class Inventory extends React.Component {
                             <th>Shipping Invoice Assignment:</th>
                             <td>
                                 <select id="" name="">
-                                    <option value="none">123456</option>
+                                    <option value="none">CM23456</option>
+                                    <option value="none">JM123456</option>
+                                    <option value="none">YQ123456</option>
                                 </select>
                             </td>
 
                             <th>In Stock:</th>
                             <td>
                                 <select id="" name="">
-                                    <option value="none">"Yes"</option>
-                                    <option value="none">"No"</option>
+                                    <option value="none">"YES"</option>
+                                    <option value="none">"NO"</option>
                                 </select>
                             </td>
                         </tr>
@@ -83,12 +85,14 @@ export default class Inventory extends React.Component {
                         <td>Fruit</td>
                         <td>INV23456</td>
                         <td>Apple</td>
+                        <td>JMV23456</td>
                         <td>"YES"</td>
                     </tr>
                     <tr>
                         <td>Vegetable</td>
+                        <td>INV23456</td>
                         <td>Asparagus</td>
-                        <td>INF03866</td>
+                        <td>QF03866</td>
                         <td>"NO"</td>
                     </tr>
                 </table>
