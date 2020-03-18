@@ -19,27 +19,48 @@ export default class Inventory extends React.Component {
                             <th>Type:</th>
                             <td>
                                 <select id="" name="">
-                                    <option value="none">2/2/2020</option>
+                                    <option value="none">Fruit</option>
+                                    <option value="none">Vegetable</option>
+                                    <option value="none">Spices</option>
                                 </select>
                             </td>
-                            <th>Customer Name:</th>
+
+                            <th>Item Name:</th>
                             <td>
                                 <select id="" name="">
-                                    <option value="none">Bob</option>
+                                    <option value="none">Apple</option>
+                                    <option value="none">Asparagus</option>
+                                    <option value="none">Avocado</option>
+                                    <option value="none">Apricot</option>
+                                    <option value="none">Banana</option>
+                                    <option value="none">Beetroot</option>
                                 </select>
                             </td>
                         </tr>
                         <tr>
-                            <th>Customer ID:</th>
+
+                            <th>Item ID:</th>
+                            <td>
+                                <select id="" name="">
+                                    <option value="none">INV23456</option>
+                                    <option value="none">INF03866</option>
+                                    <option value="none">INV25786</option>
+                                    <option value="none">INF13656</option>
+                                </select>
+                            </td>
+
+                            <th>Shipping Invoice Assignment:</th>
                             <td>
                                 <select id="" name="">
                                     <option value="none">123456</option>
                                 </select>
                             </td>
-                            <th>Invoice Number:</th>
+
+                            <th>In Stock:</th>
                             <td>
                                 <select id="" name="">
-                                    <option value="none">123456</option>
+                                    <option value="none">"Yes"</option>
+                                    <option value="none">"No"</option>
                                 </select>
                             </td>
                         </tr>
@@ -48,25 +69,27 @@ export default class Inventory extends React.Component {
                     
                 </div>
                 <div name="result">
-                <h2>Results</h2>
+                <h2>Results:</h2>
                 <table>
                     <tr>
-                        <th>Customer ID</th>
-                        <th>Customer Name</th>
-                        <th>Inovice Number</th>
-                        <th>Delivery Date</th>
+                        <th>Type</th>
+                        <th>Item ID</th>
+                        <th>Item Name</th>
+                        <th>Shipping Inovice Assignment</th>
+                        <th>In Stock</th>
+                        
                     </tr>
                     <tr>
-                        <td>123456</td>
-                        <td>Bob</td>
-                        <td>123456</td>
-                        <td>2/2/2020</td>
+                        <td>Fruit</td>
+                        <td>INV23456</td>
+                        <td>Apple</td>
+                        <td>"YES"</td>
                     </tr>
                     <tr>
-                        <td>223456</td>
-                        <td>Alex</td>
-                        <td>111111</td>
-                        <td>2/3/2020</td>
+                        <td>Vegetable</td>
+                        <td>Asparagus</td>
+                        <td>INF03866</td>
+                        <td>"NO"</td>
                     </tr>
                 </table>
             </div>
