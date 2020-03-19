@@ -16,6 +16,11 @@ export default class Nav extends React.Component {
             <p>Inventory</p>
           </NavButton>
         </Link>
+        <Link to="/dashboard/report" className="router-link">
+          <NavButton type="button" imgSrc="#">
+            <p>Report</p>
+          </NavButton>
+        </Link>
         <Link to="/dashboard/packing-slip">
           <NavButton type="button" imgSrc="#">
             <p>Packing Slip</p>
