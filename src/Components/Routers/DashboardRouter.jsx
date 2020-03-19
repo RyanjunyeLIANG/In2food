@@ -15,8 +15,8 @@ export default function DashboardRouter() {
       <Redirect to="/dashboard/packing-slip" /> 
     </Route>
     <Route path="/dashboard/inventory" component={ Inventory } />
-    <Route path="/dashboard/report" component={ Report } />
-    <Route path="/dashboard/packing-slip" component={ PackingSlips } />
+    <Route path="/dashboard/reports" component={ Report } />
+    <Route path="/dashboard/packing-slips" component={ PackingSlips } />
     <Route path="/dashboard/user-creation" component={ UserCreation } />
   </Switch>
   );
