@@ -5,6 +5,7 @@ import { Route, Switch, Redirect } from 'react-router-dom';
 import PackingSlips from '../Dashboard/PackingSlips';
 import Inventory from '../Dashboard/Inventory';
 import Report from '../Dashboard/Report';
+import UserCreation from '../Dashboard/UserCreation';
 
 export default function DashboardRouter() {
   return (
@@ -16,6 +17,7 @@ export default function DashboardRouter() {
     <Route path="/dashboard/inventory" component={ Inventory } />
     <Route path="/dashboard/report" component={ Report } />
     <Route path="/dashboard/packing-slip" component={ PackingSlips } />
+    <Route path="/dashboard/user-creation" component={ UserCreation } />
   </Switch>
   );
 }
