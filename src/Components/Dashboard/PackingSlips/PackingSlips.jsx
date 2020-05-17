@@ -1,7 +1,9 @@
 import React from 'react';
+import { getOrders } from '../../Api/packingSlipsFunc';
 
 //import components
 import Banner from '../../UI/Dashboard/Banner';
+import ResultTable from './ResultTable';
 
 export default class PackingSlips extends React.Component {
     constructor(props) {
@@ -9,13 +11,53 @@ export default class PackingSlips extends React.Component {
 
         this.state = {
             name: "Packing Slips",
+            data: [],
+
+            isLoading: false
         }
     }
 
+    componentDidMount() {
+        //Output
+        // [
+        //     {
+        //     "id": 1,
+        //     "type": "regular",
+        //     "status": "Ongoing",
+        //     "trackingNumber": "NF149242140",
+        //     "totalPrice": 3293,
+        //     "customer_id": 1,
+        //     "orderDate": "2020-05-19 00:00:00",
+        //     "created_at": "2020-05-16T12:15:01.000000Z",
+        //     "updated_at": "2020-05-16T12:15:01.000000Z",
+        //     "customer": {
+        //         "id": 1,
+        //         "customerName": "tester",
+        //         "created_at": "2020-05-16T12:14:48.000000Z",
+        //         "updated_at": "2020-05-16T12:14:48.000000Z"
+        //     }
+        //     }
+        // ]
+        this.setState({ isLoading: true });
+        getOrders()
+        .then(res => {
+            this.setState({ data: res.data, isLoading: false });
+            //console.log(this.state.data);
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    }
+
     render() {
-        return (
-            <div className="col-12 padding-fix">
-                <Banner name={this.state.name} />
+        let result = 
+        //Loading element
+        <div><strong>Loading...</strong></div>;
+
+        if(!this.state.isLoading) {
+            result = 
+            //Table elements
+            <React.Fragment>
                 <div name="filter">
                     <h2>Filter Orders By:</h2>
                     <table>
@@ -49,34 +91,16 @@ export default class PackingSlips extends React.Component {
                                 </td>
                             </tr>
                         </tbody>
-                    </table>        
-                    
+                    </table>               
                 </div>
-                <div name="result">
-                <h2>Results</h2>
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>Customer ID</th>
-                            <th>Customer Name</th>
-                            <th>Inovice Number</th>
-                            <th>Delivery Date</th>
-                        </tr>
-                        <tr>
-                            <td>123456</td>
-                            <td>Bob</td>
-                            <td>123456</td>
-                            <td>2/2/2020</td>
-                        </tr>
-                        <tr>
-                            <td>223456</td>
-                            <td>Alex</td>
-                            <td>111111</td>
-                            <td>2/3/2020</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+                <ResultTable data={this.state.data} />
+            </React.Fragment>
+        }
+
+        return (
+            <div className="col-12 padding-fix">
+                <Banner name={this.state.name} />
+                { result }
         </div>
         );
     }

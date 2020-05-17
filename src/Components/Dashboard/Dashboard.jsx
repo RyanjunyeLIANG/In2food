@@ -25,6 +25,7 @@ export default class Dashboard extends React.Component {
 
   //Event handler
   handleLogout() {
+    localStorage.removeItem('usertoken');
     this.setState(()=>({signOutRedirect: true}));
   }
 
