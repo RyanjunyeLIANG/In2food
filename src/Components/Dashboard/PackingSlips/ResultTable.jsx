@@ -2,7 +2,7 @@ import React from 'react';
 
 export default class ResultTable extends React.Component {
   constructor(props) {
-    super();
+    super(props);
 
     this.state=  {
       isEdit: false,
@@ -12,8 +12,8 @@ export default class ResultTable extends React.Component {
 
   trTable = (data, index) => {
     return (
-      <React.Fragment>
-      <tr key={ index }>
+      <React.Fragment key={ index }>
+      <tr>
         <td>{ data.customer_id }</td>
         <td>{ data.customer.customerName }</td>
         <td>{ data.trackingNumber }</td>
