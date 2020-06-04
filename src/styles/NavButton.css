@@ -1,5 +1,15 @@
 .navbar-button {
-  color: red;
-  min-width: 150px;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
+
+.btn-info {
+  background-color: #3e7dcf !important;
+}
+
+.responsive-image {
+  position: relative;
+  max-width: 30%;
+  padding: 20px 0px 20px 0px;
+}
+

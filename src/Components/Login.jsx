@@ -13,6 +13,9 @@ import '../styles/login.css';
 //import fake Authorisation
 import FakeAuth from './FakeAuth';
 
+//import UI components
+import MainLogo from './UI/Logo';
+
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
@@ -95,7 +98,7 @@ export default class Login extends React.Component {
           
           {/* Icon */}
           <div className="fadeIn first logo">
-            <img src={require('../images/In2foodLogo185x76px.png')} id="logo" alt="In2food Logo" />
+            <MainLogo />
           </div>
 
           {/* Login Error indicator */}

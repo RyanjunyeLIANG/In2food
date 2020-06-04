@@ -29,6 +29,7 @@ export default function AppRouter() {
         
         {/* Test router for management page */}
         <Route path="/dashboard" component={Dashboard} />
+       
         {/* Authenticate router for management page */}
         {/* <PrivateRoute exact path="/dashboard">
           <Dashboard />
