@@ -3,6 +3,8 @@ import React from 'react';
 //import components
 import Banner from '../../UI/Dashboard/Banner';
 
+import '../../../styles/inventory.css';
+
 export default class Inventory extends React.Component {
     constructor(props) {
         super(props);
@@ -18,10 +20,10 @@ export default class Inventory extends React.Component {
                 <Banner name={this.state.name} />
                 <div name="filter">
                     <h2>Filter By:</h2>
-                    <table>
+                    <table name="table">
                         <tbody>
                             <tr>
-                                <th>Type:</th>
+                                <th name="type">Type:</th>
                                 <td>
                                     <select id="" name="">
                                         <option value="none">Fruit</option>
