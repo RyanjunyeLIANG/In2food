@@ -59,39 +59,27 @@ export default class PackingSlips extends React.Component {
             //Table elements
             <React.Fragment>
                 <div name="filter">
-                    <h2>Filter Orders By:</h2>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>Delivery Date:</th>
-                                <td>
-                                    <select id="" name="">
-                                        <option value="none">2/2/2020</option>
-                                    </select>
-                                </td>
-                                <th>Customer Name:</th>
-                                <td>
-                                    <select id="" name="">
-                                        <option value="none">Bob</option>
-                                    </select>
-                                </td>
-                            </tr>
-                            <tr>
-                                <th>Customer ID:</th>
-                                <td>
-                                    <select id="" name="">
-                                        <option value="none">123456</option>
-                                    </select>
-                                </td>
-                                <th>Invoice Number:</th>
-                                <td>
-                                    <select id="" name="">
-                                        <option value="none">123456</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>               
+                    <h2>Search Order</h2>
+                    <form>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Order Number:</td>
+                                    <td><input type="text" id="orderid" name="orderid"></input></td>
+                                </tr>
+                                <tr>
+                                    <td>Customer Name:</td>
+                                    <td><input type="text" id="cusotmername" name="customername"></input></td>
+                                </tr>
+                                <tr>
+                                    <td>Tracking Number:</td>
+                                    <td><input type="text" id="trackingnumber" name="trackingnumber"></input></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <input type="submit" value="Search"></input>
+                        <input type="reset" value="Reset"></input>
+                    </form>
                 </div>
                 <ResultTable data={this.state.data} />
             </React.Fragment>
