@@ -59,3 +59,7 @@ th, td {
 
   background-color: white;
 }
+
+.Results table {
+  margin: auto;
+}
