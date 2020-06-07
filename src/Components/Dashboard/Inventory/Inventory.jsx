@@ -9,7 +9,7 @@ import AddSuppliers from './AddSuppliers';
 import Banner from '../../UI/Dashboard/Banner';
 import ResultTable from './ResultTable';
 
-import '../../../styles/packingslips.css';
+import '../../../styles/inventory.css';
 
 export default class Inventory extends React.Component {
     constructor(props) {
@@ -86,7 +86,7 @@ export default class Inventory extends React.Component {
         this.setState({ isLoading: true });
         getItems()
         .then(res => {
-            this.setState({ data: res.data, isLoading: false, searchItemId: '', searchItemName: '', searchCategory: this.state.itemCategoryList[0], searchSupplierName: '' });
+            this.setState({ data: res.data, searchItemId: '', searchItemName: '', searchCategory: this.state.itemCategoryList[0], searchSupplierName: '' });
         })
         .catch(err => {
             console.log(err);
@@ -94,7 +94,8 @@ export default class Inventory extends React.Component {
         getSupplierList()
         .then(res =>{
             this.setState({ 
-                supplierList: res.data
+                supplierList: res.data,
+                isLoading: false
             });
         })
         .catch(err => {
@@ -239,7 +240,7 @@ export default class Inventory extends React.Component {
         return (
             <div className="col-12 padding-fix">
                 <Banner name={this.state.name} />
-                <div className="wrapper">
+                <div className="inventory-wrapper">
                     { inputField }
                     { result }
                 </div>

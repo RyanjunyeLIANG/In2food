@@ -89,7 +89,7 @@ export default class PackingSlips extends React.Component {
         this.setState({ isLoading: true });
         getOrders()
         .then(res => {
-            this.setState({ data: res.data, isLoading: false, searchOrderId: '', searchCustomerName: '', searchTrackingNumber: '' });
+            this.setState({ data: res.data, searchOrderId: '', searchCustomerName: '', searchTrackingNumber: '' });
         })
         .catch(err => {
             console.log(err);
@@ -97,7 +97,8 @@ export default class PackingSlips extends React.Component {
         getCustomerList()
         .then(res =>{
             this.setState({ 
-                customerList: res.data
+                customerList: res.data,
+                isLoading: false
             });
         })
         .catch(err => {
@@ -235,7 +236,7 @@ export default class PackingSlips extends React.Component {
         return (
             <div className="col-12 padding-fix">
                 <Banner name={this.state.name} />
-                <div className="wrapper">
+                <div className="packing-slip-wrapper">
                     { inputField }
                     { result }
                 </div>

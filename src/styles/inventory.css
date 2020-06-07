@@ -2,15 +2,17 @@ div[name='filter'] table[name="table"] th[name="type"] {
   font-size: small;
 }
 
-.wrapper{
+.inventory-wrapper{
   background-image: url(../images/bg.jpg);
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 10px;
+  padding-top: 50px !important;
   margin-left: auto;
   margin-right: auto;
   opacity: 1;
-  max-width: 1600px;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  min-height: 1100px;
 }
 
 button {
