@@ -48,7 +48,7 @@ h2.active {
 
 /* FORM TYPOGRAPHY*/
 
-input[type=button], button[type=submit], input[type=reset]  {
+input[type=button], button[type=submit], input[type=reset] {
   background-color: #56baed;
   border: none;
   color: white;
@@ -70,11 +70,11 @@ input[type=button], button[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover, button[type=submit]:hover, input[type=reset]:hover  {
+input[type=button]:hover, button[type=submit]:hover, input[type=reset]:hover {
   background-color: #39ace7;
 }
 
-input[type=button]:active, button[type=submit]:active, input[type=reset]:active  {
+input[type=button]:active, button[type=submit]:active, input[type=reset]:active {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -82,12 +82,12 @@ input[type=button]:active, button[type=submit]:active, input[type=reset]:active 
   transform: scale(0.95);
 }
 
-input[type=text], input[type=password], input[type=number] {
+input[type=text], input[type=password], input[type=number], input[type=date], input[type=email], select {
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
   padding: 15px 32px;
-  text-align: center;
+  /* text-align: center; */
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
@@ -103,12 +103,16 @@ input[type=text], input[type=password], input[type=number] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus, input[type=password]:focus,  input[type=number]:focus {
+input[type=number], input[type=date], input[type=email], select {
+  width: 98% !important;
+}
+
+input[type=text]:focus, input[type=password]:focus,  input[type=number]:focus, input[type=date]:focus, input[type=email]:focus, select:focus {
   background-color: #fff;
   border-bottom: 2px solid #5fbae9;
 }
 
-input[type=text]:placeholder, input[type=password]:placeholder,  input[type=number]:placeholder {
+input[type=text]:placeholder, input[type=password]:placeholder,  input[type=number]:placeholder, input[type=date]:placeholder, input[type=email]:placeholder, select:placeholder {
   color: #cccccc;
 }
 

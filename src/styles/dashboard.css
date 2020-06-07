@@ -21,7 +21,7 @@
 
 .margin-fix {
   margin-right: 0px !important;
-  margin-left: 0px !important;
+  margin-left: -20px !important;
 }
 
 div[name="banner"] {
@@ -37,5 +37,5 @@ div[name="banner"] > h1 {
   background-color: yellowgreen;
   padding-top: 1.9%;
   padding-bottom: 1.9%;
-  margin: 0px !important;
+  /* margin: 0px !important; */
 }

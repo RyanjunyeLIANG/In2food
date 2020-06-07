@@ -3,10 +3,12 @@
   padding-left: 10px;
   padding-right: 10px;
   padding-top: 10px;
+  margin-top: -10px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100%;
   opacity: 1;
-  max-width: 1600px;
+  max-width: 100%;
 }
 
 button {
@@ -34,7 +36,14 @@ th, td {
 
 }
 
- 
+div.filter {
+  text-align: center;
+  align-items: center;
+}
+
+form table {
+  margin: auto;
+}
 
 .Query{
   margin: 40px;
