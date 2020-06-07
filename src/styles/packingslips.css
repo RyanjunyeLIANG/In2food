@@ -1,18 +1,16 @@
-div[name='filter'] table[name="table"] th[name="type"] {
-  font-size: small;
-}
-
-.inventory-wrapper{
+.packing-slip-wrapper{
   background-image: url(../images/bg.jpg);
   padding-left: 10px;
   padding-right: 10px;
-  padding-top: 50px !important;
+  padding-top: 50px;
+  margin-top: -10px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 100%;
   opacity: 1;
-  max-width: 100% !important;
-  max-height: 100% !important;
-  min-height: 1100px;
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 1300px;
 }
 
 button {
@@ -40,7 +38,14 @@ th, td {
 
 }
 
- 
+div.filter {
+  text-align: center;
+  align-items: center;
+}
+
+form table {
+  margin: auto;
+}
 
 .Query{
   margin: 40px;
@@ -58,8 +63,4 @@ th, td {
   text-align: center;
 
   background-color: white;
-}
-
-.Results table {
-  margin: auto;
 }

@@ -5,6 +5,8 @@ import { register } from '../../Api/Auth';
 import Banner from '../../UI/Dashboard/Banner';
 import FormField from '../../UI/formField';
 
+import '../../../styles/user.css';
+
 export default class UserCreation extends React.Component {
     constructor(props) {
         super(props);
@@ -103,31 +105,38 @@ export default class UserCreation extends React.Component {
         return (
             <div className="col-12 padding-fix">
                 <Banner name={this.state.banner} />
-                <form onSubmit={ this.onSubmit }>
-                    <div className="form-group">
-                        <label><strong>Account info: </strong></label>
-                        <FormField name= 'name' type='text' onChange={ this.onChange } />
-                        <FormField name= 'email' type='text' onChange={ this.onChange } />
-                        <FormField name= 'privilege' type='text' onChange={ this.onChange } />
-                        <FormField name= 'password' type='password' onChange={ this.onChange } />
-                        <FormField name= 'password_confirmation' type='password' onChange={ this.onChange } />
-                    </div>
-                    <div className="form-group">
-                        <label><strong>Contact info: </strong></label>
-                        <FormField name= 'firstName' type='text' onChange={ this.onChange } />
-                        <FormField name= 'lastName' type='text' onChange={ this.onChange } />
-                        <FormField name= 'phone' type='number' onChange={ this.onChange } />
-                    </div>
-                    <div className="form-group">
-                        <label><strong>Address: </strong></label>
-                        <FormField name= 'street' type='text' onChange={ this.onChange } />
-                        <FormField name= 'suburb' type='text' onChange={ this.onChange } />
-                        <FormField name= 'state' type='text' onChange={ this.onChange } />
-                        <FormField name= 'postcode' type='text' onChange={ this.onChange } />
-                    </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
-                </form>
+                <div className="wrapper">
+                    <form onSubmit={ this.onSubmit }>
+                        <div className="form-group">
+                            <label><strong>Account info: </strong></label>
+                            <FormField name= 'name' type='text' onChange={ this.onChange } />
+                            <FormField name= 'email' type='text' onChange={ this.onChange } />
+                            <FormField name= 'privilege' type='text' onChange={ this.onChange } />
+                            <FormField name= 'password' type='password' onChange={ this.onChange } />
+                            <FormField name= 'password_confirmation' type='password' onChange={ this.onChange } />
+                        </div>
+                        <div className="form-group">
+                            <label><strong>Contact info: </strong></label>
+                            <FormField name= 'firstName' type='text' onChange={ this.onChange } />
+                            <FormField name= 'lastName' type='text' onChange={ this.onChange } />
+                            <FormField name= 'phone' type='number' onChange={ this.onChange } />
+                        </div>
+                        <div className="form-group">
+                            <label><strong>Address: </strong></label>
+                            <FormField name= 'street' type='text' onChange={ this.onChange } />
+                            <FormField name= 'suburb' type='text' onChange={ this.onChange } />
+                            <FormField name= 'state' type='text' onChange={ this.onChange } />
+                            <FormField name= 'postcode' type='text' onChange={ this.onChange } />
+                        </div>
+                        <div className="submitButton">
+                            <button type="submit" className="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         );
     }
 }
+
+
+

@@ -9,7 +9,8 @@ import './styles/index.css';
 //import CSS libraries
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-axios.defaults.baseURL = 'http://ryanliang.test/api/';
+// axios.defaults.baseURL = 'http://ryanliang.test/api/';
+axios.defaults.baseURL = 'http://13.211.208.1/api/';
 
 ReactDOM.render(
   <App />, 

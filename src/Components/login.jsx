@@ -57,9 +57,9 @@ export default class Login extends React.Component {
           this.setState({ userAuthenticating: false })
         }
       })
-      // .catch(err => {
-      //   console.log(err);
-      // });
+      .catch(err => {
+        console.log(err);
+      });
     }
   }
 

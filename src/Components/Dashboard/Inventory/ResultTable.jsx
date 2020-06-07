@@ -12,7 +12,7 @@ export default class ResultTable extends React.Component {
       isLoading: false,
     }
 
-    this.toggleEditOrderMode = this.props.toggleEditOrderMode.bind(this);
+    this.toggleEditItemMode = this.props.toggleEditItemMode.bind(this);
     this.resetData = this.props.resetData.bind(this);
   }
 
@@ -31,11 +31,10 @@ export default class ResultTable extends React.Component {
                 data={data}
                 key={index}
                 resetData={this.resetData}
-                toggleEditOrderMode={this.toggleEditOrderMode}
+                toggleEditItemMode={this.toggleEditItemMode}
                 editDataCallBack={this.callBackFromChild}
-                customerList={this.props.customerList}
-                orderTypeList={this.props.orderTypeList}
-                orderStatusList={this.props.orderStatusList}
+                supplierList={this.state.supplierList}
+                itemCategoryList={this.state.itemCategoryList}
               />
     });
   }
@@ -47,14 +46,13 @@ export default class ResultTable extends React.Component {
       <table>
           <tbody>
               <tr>
-                  <th>Order ID</th>
-                  <th>Customer ID</th>
-                  <th>Customer Name</th>
-                  <th>Tracking Number</th>
-                  <th>Type</th>
-                  <th>Status</th>
-                  <th>Date</th>
-                  <th>Price</th>
+                  <th>Item ID</th>
+                  <th>Item Name</th>
+                  <th>Category</th>
+                  <th>Description</th>
+                  <th>Supplier ID</th>
+                  <th>Supplier Name</th>
+                  <th>Unit Price</th>
                   <th>Actions</th>
               </tr>
               {this.listTable(this.state.data)}
