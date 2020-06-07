@@ -166,7 +166,7 @@ export default class Login extends React.Component {
           
           {/* Remind Password */}
           <div id="formFooter">
-            <a className="underlineHover" href="/fake">Forgot Password?</a>
+            {/* <a className="underlineHover" href="/fake">Forgot Password?</a> */}
           </div>
         </div>
       </div>
