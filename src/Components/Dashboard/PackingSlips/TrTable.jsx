@@ -25,14 +25,16 @@ export default class TrTable extends React.Component {
   }
 
   handleDelete() {
-    this.setState({ isProcessing: true })
     let id = this.state.data.id
-    deleteOrders(id)
-    .then(res => {
-      this.setState({ isProcessing: false })
-      alert('delete order ' + id + ' successed.')
-      this.props.resetData()
-    })
+    if(window.confirm("delete order " + id + "?")){
+      this.setState({ isProcessing: true })
+
+      deleteOrders(id)
+      .then(res => {
+        this.setState({ isProcessing: false })
+        this.props.resetData()
+      })
+   }
   }
 
   toggleEditMode() {
