@@ -12,7 +12,7 @@ export default function DashboardRouter() {
   <Switch>
     {/* Default page of dashboard */}
     <Route exact path="/dashboard">
-      <Redirect to="/dashboard/packing-slip" /> 
+      <Redirect to="/dashboard/packing-slips" /> 
     </Route>
     <Route path="/dashboard/inventory" component={ Inventory } />
     <Route path="/dashboard/reports" component={ Report } />

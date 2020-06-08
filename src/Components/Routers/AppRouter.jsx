@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 
 // import fakeAuth from './Components/FakeAuth';
-import Login from '../Login';
+import Login from '../login';
 import Dashboard from '../Dashboard/Dashboard';
 
 // Authenticate function with fake-auth component

@@ -1,0 +1,37 @@
+.wrapper{
+  background-image: url(../images/bg.jpg);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  max-width: 100%
+}
+
+  form {
+    width: 80%,
+
+  }
+
+  form > div {
+    font-size: 20px;
+    padding: 10px 10px 10px;
+    width: 60%
+  }
+
+  div.submitButton {
+    align-items: center;
+    text-align: center;
+  }
+
+  div.form-group {
+    margin-bottom: 15px !important;
+    border: 1px;
+  }
+  input[type="text"], input[type="number"], input[type="password"]
+  {
+      width:400px
+
+  }
+

@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
+import axios from 'axios';
 import * as serviceWorker from './serviceWorker';
 
 //import CSS
 import './styles/index.css';
 //import CSS libraries
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// axios.defaults.baseURL = 'http://ryanliang.test/api/';
+axios.defaults.baseURL = 'http://13.211.208.1/api/';
 
 ReactDOM.render(
   <App />, 

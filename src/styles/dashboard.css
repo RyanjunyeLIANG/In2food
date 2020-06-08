@@ -21,7 +21,7 @@
 
 .margin-fix {
   margin-right: 0px !important;
-  margin-left: 0px !important;
+  margin-left: -20px !important;
 }
 
 div[name="banner"] {

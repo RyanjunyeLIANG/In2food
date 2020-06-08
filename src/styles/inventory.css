@@ -1,0 +1,65 @@
+div[name='filter'] table[name="table"] th[name="type"] {
+  font-size: small;
+}
+
+.inventory-wrapper{
+  background-image: url(../images/bg.jpg);
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 50px !important;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 1;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  min-height: 1100px;
+}
+
+button {
+  background: #118fb6;
+  display: block;
+  border-radius: 8px;
+  color: black;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 5px;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  position: relative;
+  left: 20px;
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  
+
+}
+
+ 
+
+.Query{
+  margin: 40px;
+  border: 5px inset rgb(65, 168, 199);
+  font-size: 20px;
+  text-align: center;
+
+  background-color: white;
+}
+
+.Results{
+  margin: 40px;
+  border: 5px groove rgb(41, 173, 235);
+  font-size: 20px;
+  text-align: center;
+
+  background-color: white;
+}
+
+.Results table {
+  margin: auto;
+}
