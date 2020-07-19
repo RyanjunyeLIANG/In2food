@@ -24,12 +24,12 @@ export const login = user => {
   })
   .then(res => {
     localStorage.setItem('usertoken', res.data.access_token);
-    //console.log(res);
+    console.log(res);
     return res;
   })
   .catch(err => {
-    console.log(err);
-    return 'Error!'
+    console.log(err.response);
+    return err.response;
   });
 }
 

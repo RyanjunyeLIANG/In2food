@@ -36,8 +36,7 @@ export default class Login extends React.Component {
       isLoading: false,
       userAuthenticating: false,
       errorMessage: '',
-      loginErrors: "d-none",
-      redirectToReferrer: false,
+      redirectToReferrer: false
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -79,9 +78,14 @@ export default class Login extends React.Component {
     
     /* axios for calling the backend API, we'll use this later on */
     login(user).then(res => {
-      if(res.data.error) {
+      if(res.status !== 200) {
         this.setState(() => ({
-          loginErrors: "d-block",
+          errorMessage: res.data.message,
+          isLoading: false
+        }));
+      }
+      else if(res.data.error) {
+        this.setState(() => ({
           errorMessage: res.data.error,
           isLoading: false
         }));
@@ -97,7 +101,7 @@ export default class Login extends React.Component {
     );
   }
 
-  // Login Authentication
+  // Fake Login Authentication
   // loginAuthentication(username, password) {
   //   const userdata = this.state.data.user;
 
@@ -139,7 +143,7 @@ export default class Login extends React.Component {
           </div>
 
           {/* Login Error indicator */}
-    <p id="errorIndicator" className={`alert alert-danger ${this.state.loginErrors}`}>{this.state.errorMessage}</p>
+    <p id="errorIndicator" className={`alert alert-danger ${this.state.errorMessage ? 'd-block' : 'd-none'}`}>{this.state.errorMessage}</p>
           {/* Login Form */}
           <form onSubmit={this.handleSubmit}>
             <input
